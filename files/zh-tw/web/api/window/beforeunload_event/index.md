@@ -6,18 +6,26 @@ original_slug: Web/API/WindowEventHandlers/onbeforeunload
 
 {{APIRef("HTML DOM")}}
 
-**`onbeforeunload`** 事件處理函數包含的代碼將在 [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event) 發出時被執行。當 window 準備釋放它的資源時，該事件被觸發。此時 document 仍然可見，且事件是仍然可被取消的。
+**`onbeforeunload`** 事件會在視窗關閉、DOM或其資源被移除時執行。在事件觸發的時機點，該DOM依舊存在，且事件仍舊可以被取消。
 
-> **備註：** 為了避免不必要的彈出窗口，除非頁面已經有過互動，否則可能不會顯示 beforeunload 創建的詢問窗口。對於特定的瀏覽器列表，請參閱瀏覽器兼容性部分。
+藉由這個事件能使網頁藉由一個對話框來確認是否真的要離開當前頁面。如果使用者確定，瀏覽器就能導向至新的頁面，否則取消。
+
+根據規範定義，事件必須先執行 {{domxref("Event.preventDefault()", "preventDefault()")}} 才能進行上述跳出對話框的動作。
+
+根據HTML的規格書所述，{{domxref("window.alert()")}}、{{domxref("window.confirm()")}}、{{domxref("window.prompt()")}}在此事件執行的過程中有可能被忽略，詳情請參閱[HTML 規格書](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts)原文。
 
 ## 語法
 
-```plain
-window.onbeforeunload = funcRef
+在{{domxref("EventTarget.addEventListener", "addEventListener()")}}方法中使用事件名稱，或是直接使用事件處理的屬性
+
+```js
+addEventListener('beforeunload', function(event){ });
+onbeforeunload = function(event){ };
 ```
 
-- `funcRef` 是函數或函數表達式的引用。
-- 這個函數應該設置一個字串到事件對象的 returnValue 屬性上，且返回該字串。
+## 事件類型
+
+{{domxref("BeforeUnloadEvent")}}，繼承自{{domxref("Event")}}。
 
 ## 範例
 
@@ -39,7 +47,7 @@ Note also that various mobile browsers ignore the result of the event (that is, 
 
 You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event) event. More documentation is available there.
 
-## 規範
+## 規格
 
 The event was originally introduced by Microsoft in Internet Explorer 4 and standardized in the HTML5 specification.
 
