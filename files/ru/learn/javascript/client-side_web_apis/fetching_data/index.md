@@ -13,7 +13,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Другой очень распространённой задачей в современных веб-сайтах и ​​приложениях является получение отдельных элементов данных с сервера для обновления разделов веб-страницы без необходимости загрузки всей новой страницы. Эта, казалось бы, небольшая деталь оказала огромное влияние на производительность и поведение сайтов, поэтому в этой статье мы объясним концепцию и рассмотрим технологии, которые делают это возможным, например XMLHttpRequest и API Fetch.
+Другой очень распространённой задачей в современных веб-сайтах и приложениях является получение отдельных элементов данных с сервера для обновления разделов веб-страницы без необходимости загрузки всей новой страницы. Эта, казалось бы, небольшая деталь оказала огромное влияние на производительность и поведение сайтов, поэтому в этой статье мы объясним концепцию и рассмотрим технологии, которые делают это возможным, например XMLHttpRequest и API Fetch.
 
 | Необходимые условия: | Основы JavaScript (см. [первые шаги](/ru/docs/Learn/JavaScript/First_steps), [структурные элементы](/ru/docs/Learn/JavaScript/Building_blocks), [объекты JavaScript](/ru/docs/Learn/JavaScript/Objects)), [основы клиентских API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -262,7 +262,7 @@ fetch(url).then(function(response) {
 
 Чтобы завершить статью, мы рассмотрим несколько более сложный пример, который показывает более интересные применения Fetch. Мы создали образец сайта под названием The Can Store - это вымышленный супермаркет, который продаёт только консервы. Вы можете найти этот пример [в прямом эфире на GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/) и [посмотреть исходный код](https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](https://mdn.mozillademos.org/files/14779/can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
 
 По умолчанию на сайте отображаются все продукты, но вы можете использовать элементы управления формы в столбце слева, чтобы отфильтровать их по категориям, поисковому запросу или и тому и другому.
 

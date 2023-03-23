@@ -15,7 +15,7 @@ slug: Web/HTML/Element/video
 
 ## 属性
 
-类似于所有其它 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+类似于所有其他 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("autoplay")}}
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
@@ -79,8 +79,8 @@ slug: Web/HTML/Element/video
 | {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                                             | 由于缺乏数据而暂停或延迟后，播放准备开始。                                                                                                                       |
 | {{domxref("HTMLMediaElement.progress_event", 'progress')}}                                             | 在浏览器加载资源时周期性触发。                                                                                                                                   |
 | {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}                                     | 播放速率发生变化。                                                                                                                                               |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                                 | *跳帧（seek）*操作完成。                                                                                                                                         |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                             | *跳帧（seek）*操作开始。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                                 | _跳帧_（seek）操作完成。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                             | _跳帧_（seek）操作开始。                                                                                                                                         |
 | {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                             | 用户代理（user agent）正在尝试获取媒体数据，但数据意外未出现。                                                                                                   |
 | {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                                             | 媒体数据加载已暂停。                                                                                                                                             |
 | {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}                                     | `currentTime` 属性指定的时间发生变化。                                                                                                                           |

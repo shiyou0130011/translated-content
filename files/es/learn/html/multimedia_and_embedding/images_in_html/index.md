@@ -72,9 +72,9 @@ Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la 
 
 > **Advertencia:** La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
 >
-> 1\) seas dueño de la imagen,  
-> 2\) tengas permiso escrito explícito del dueño de la imagen o  
-> 3\) tengas suficientes pruebas de que la imagen es de dominio público.  
+> 1. seas dueño de la imagen,
+> 2. tengas permiso escrito explícito del dueño de la imagen o
+> 3. tengas suficientes pruebas de que la imagen es de dominio público
 >
 > El incumplimiento de las normas de los derechos de autor es un acto ilegal y poco ético. Por lo tanto, no apuntes **nunca** tu atributo `src` a una imagen que esté alojada en un sitio web si no tienes el permiso para hacerlo. Esto se llama _hotlinking_. Asimismo es ilegal robar el ancho de banda de alguien. Además, ralentiza tu página y te deja sin control sobre la imagen si la eliminan o reemplazan por otra que incluso podría resultar embarazosa.
 
@@ -496,12 +496,3 @@ En resumen: si una imagen tiene significado en términos del contenido de tu pá
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de video y audio](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> a \<iframe>: otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Añadir gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes _responsive_ (adaptativas)](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de bienvenida de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

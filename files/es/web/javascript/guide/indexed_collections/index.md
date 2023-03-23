@@ -1,13 +1,6 @@
 ---
 title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Array
-  - Arreglo
-  - Guía
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
 
@@ -369,7 +362,7 @@ console.log(a.indexOf('z')) // logs -1, porque no se encontró 'z'
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como `indexOf`, pero comienza al final y busca hacia atrás.
 
 ```js
-let​a = ['a', 'b', 'c', 'd', 'a', 'b']
+let a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b')) // registra 5
 
 // Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
@@ -380,7 +373,7 @@ console.log(a.lastIndexOf('z'))    // registra -1
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta `callback` en cada elemento del arreglo y devuelve `undefined`.
 
 ```js
-let​a = ['a', 'b', 'c']
+let a = ['a', 'b', 'c']
 a.forEach(function(elemento) { console.log(elemento) })
 // registra cada elemento por turno
 ```
@@ -436,7 +429,7 @@ Si `initialValue` _no_ es especificado, entonces `callback` los primeros dos val
 Si `callback` necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.
 
 ```js
-let​a = [10, 20, 30]
+let a = [10, 20, 30]
 let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Imprime 60
 ```
