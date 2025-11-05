@@ -5,17 +5,17 @@ slug: Web/HTML/Reference/Global_attributes/popover
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`popover`** [global attribute](/zh-tw/docs/Web/HTML/Reference/Global_attributes) is used to designate an element as a popover element.
+**`popover`** [全域屬性](/zh-tw/docs/Web/HTML/Reference/Global_attributes)是用來使元素標示成彈出視窗元素。
 
-## Value
+## 參數
 
-The `popover` attribute can take one of the following values:
+`popover`屬性可以填入以下參數:
 
 - `"auto"`
   - : [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
 
     > [!NOTE]
-    > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
+    > 當`popover`為空，即`popover`或`popover=""`的狀況，等同於`popover="auto"`。
 
 - `"hint"` {{experimental_inline}}
   - : [`hint`](/zh-tw/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
@@ -24,7 +24,7 @@ The `popover` attribute can take one of the following values:
 - `"manual"`
   - : [`manual`](/zh-tw/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
 
-## Description
+## 說明
 
 Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
 
@@ -44,9 +44,9 @@ Usually `hint` popovers are shown and hidden in response to non-click JavaScript
 
 For detailed information on usage, see the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page.
 
-## Examples
+## 範例
 
-The following renders a button that will open a popover element when activated.
+以下範例是一個按鈕，點下後會跳出一個彈出視窗。
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
@@ -57,20 +57,20 @@ The following renders a button that will open a popover element when activated.
 {{EmbedLiveSample('Examples', 600, 200)}}
 
 > [!NOTE]
-> See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
+> 在我們的 [Popover API 範例集頁](https://mdn.github.io/dom-examples/popover-api/)中可以找到所有 MDN 的 popover 範例。
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{domxref("Popover API", "Popover API", "", "nocode")}}
-- [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute
-- [`popovertargetaction`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute
-- [`::backdrop`](/zh-tw/docs/Web/CSS/::backdrop) CSS pseudo-element
-- [`:popover-open`](/zh-tw/docs/Web/CSS/:popover-open) CSS pseudo-class
+- [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML 屬性
+- [`popovertargetaction`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML 屬性
+- [`::backdrop`](/zh-tw/docs/Web/CSS/::backdrop) CSS 偽元素
+- [`:popover-open`](/zh-tw/docs/Web/CSS/:popover-open) CSS 偽 class
