@@ -12,8 +12,8 @@ slug: Web/HTML/Reference/Global_attributes/popover
 `popover`屬性可以填入以下參數:
 
 - `"auto"`
-  - : [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
-
+  - : [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) 的彈出釋出可以「輕易關閉」——即你只要點擊彈出視窗外、或是按下 <kbd>Esc</kbd> 鍵就可以關閉彈出視窗。
+    一般來說，你只能有一個`auto`的彈出視窗。當你要開啟第二個彈出視窗時，就會關閉第一個。這規則唯一的例外情況是嵌套`auto`的彈出視窗。詳情請參閱《[嵌套彈出視窗](/zh-TW/docs/Web/API/Popover_API/Using#nested_popovers)》。
     > [!NOTE]
     > 當`popover`為空，即`popover`或`popover=""`的狀況，等同於`popover="auto"`。
 
