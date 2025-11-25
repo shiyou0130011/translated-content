@@ -26,9 +26,9 @@ slug: Web/HTML/Reference/Global_attributes/popover
 
 ## 說明
 
-Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
+Popover 元素默認情況下會有條樣式 `display: none` 將其隱藏，除非由調用或控制元素（例如有 [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) 屬性的`<button>` 或 `<input type="button">`）或是呼叫 {{domxref("HTMLElement.showPopover()")}}來將之開啟。
 
-When open, popover elements will appear above all other elements in the {{glossary("top layer")}}, and won't be influenced by parent elements' {{cssxref('position')}} or {{cssxref('overflow')}} styling.
+開啟的 popover 元素會顯示在{{glossary("top layer")}}其他元素之上，並且不會受到父元素的 {{cssxref('position')}} 或是 {{cssxref('overflow')}} 樣式影響。
 
 Popovers that have the [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) state can be shown and hidden using associated controls (designated by the [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) and "light dismissed" by clicking outside the popover area, opening another popover, or pressing browser-specific mechanisms such as the <kbd>Esc</kbd> key.
 
