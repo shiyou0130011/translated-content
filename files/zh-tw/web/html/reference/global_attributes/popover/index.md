@@ -13,13 +13,13 @@ slug: Web/HTML/Reference/Global_attributes/popover
 
 - `"auto"`
   - : [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) 的彈出釋出可以「輕易關閉」——即你只要點擊彈出視窗外、或是按下 <kbd>Esc</kbd> 鍵就可以關閉彈出視窗。
-    一般來說，你只能有一個`auto`的彈出視窗。當你要開啟第二個彈出視窗時，就會關閉第一個。這規則唯一的例外情況是嵌套`auto`的彈出視窗。詳情請參閱《[嵌套彈出視窗](/zh-TW/docs/Web/API/Popover_API/Using#nested_popovers)》。
+    一般來說，你只能有一個`auto`的彈出視窗。當你要開啟第二個彈出視窗時，就會關閉第一個。唯一的例外情況是嵌套彈出視窗。
     > [!NOTE]
     > 當`popover`為空，即`popover`或`popover=""`的狀況，等同於`popover="auto"`。
 
 - `"hint"` {{experimental_inline}}
-  - : [`hint`](/zh-tw/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
-    They can be light dismissed and will respond to close requests.
+  - : [`hint`](/zh-tw/docs/Web/API/Popover_API/Using#using_hint_popover_state) 開啟時，不會影響其他 `auto` 彈出視窗，但會把所有`hint`的彈出視窗關閉。
+    它們可以「輕易關閉」，並且也會回應關閉的請求。
 
 - `"manual"`
   - : [`manual`](/zh-tw/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
