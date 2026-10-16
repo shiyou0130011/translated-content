@@ -58,13 +58,13 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 {{EmbedLiveSample('Examples', 600, 200)}}
 
-### Nesting popovers
+### 巢狀彈出視窗
 
-In this example, a button opens a popover that contains additional nested popovers. The nested popovers can be opened without closing the original menu popover.
+在以下的範例中，彈出視窗內有個按鈕可以開啟另一個彈出視窗。開啟第二個彈出視窗時，原先的彈出視窗不會被關閉。
 
 #### HTML
 
-In the first part of the HTML, we create a {{htmlElement("button")}} that will open the main popover, which is a menu containing a few options.
+在 HTML ，我們先建立一個按鈕 {{htmlElement("button")}} 用來開啟主彈出視窗。該彈出視窗是要放置目錄選項。
 
 ```html
 <header>
@@ -75,7 +75,9 @@ In the first part of the HTML, we create a {{htmlElement("button")}} that will o
 </main>
 ```
 
-In the second part of the HTML, we create the menu popover that is opened by the button we created in the previous code block. This menu popover contains an unordered list of menu items, each with an info button that opens a nested popover. The menu popover uses `popover="auto"`, which means it will not be closed when the nested popovers are opened.
+接下來建立彈出視窗的內容，該彈出視窗會由上一步驟建立的按鈕開啟。在這彈出視窗中，包含了無序的目錄項目，每個目錄都有一個ⓘ按鈕可以用來開啟巢狀彈出視窗。
+
+目錄項目的 popover 屬性值為 `popover="auto"`，表示巢狀彈出視窗開啟時，主彈出視窗不會關閉。
 
 ```html
 <!-- menu popover -->
