@@ -46,6 +46,8 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ## 範例
 
+### Making an element a popover
+
 以下範例是一個按鈕，點下後會跳出一個彈出視窗。
 
 ```html
@@ -55,6 +57,125 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 ```
 
 {{EmbedLiveSample('Examples', 600, 200)}}
+
+### Nesting popovers
+
+In this example, a button opens a popover that contains additional nested popovers. The nested popovers can be opened without closing the original menu popover.
+
+#### HTML
+
+In the first part of the HTML, we create a {{htmlElement("button")}} that will open the main popover, which is a menu containing a few options.
+
+```html
+<header>
+  <button popovertarget="menu">Open Menu</button>
+</header>
+<main>
+  <!--  Page content goes here  -->
+</main>
+```
+
+In the second part of the HTML, we create the menu popover that is opened by the button we created in the previous code block. This menu popover contains an unordered list of menu items, each with an info button that opens a nested popover. The menu popover uses `popover="auto"`, which means it will not be closed when the nested popovers are opened.
+
+```html
+<!-- menu popover -->
+<div id="menu" popover="auto">
+  <ul>
+    <li>
+      <a href="#">New thing</a><button popovertarget="new-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Open thing</a><button popovertarget="open-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Save thing</a><button popovertarget="save-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">Close thing</a><button popovertarget="close-info">ⓘ</button>
+    </li>
+  </ul>
+</div>
+```
+
+In the final part of the HTML, we create the info popovers for each menu item. Each popover includes `popover="hint"`, which means it will not close the original menu popover but will close the other open info popovers.
+
+```html
+<!-- info popovers -->
+<div id="new-info" class="info-popover" popover="hint">
+  This is some information about <strong>creating a new</strong> thing.
+</div>
+<div id="open-info" class="info-popover" popover="hint">
+  This is some information about <strong>opening an existing</strong> thing.
+</div>
+<div id="save-info" class="info-popover" popover="hint">
+  This is some information about <strong>saving the current</strong> thing.
+</div>
+<div id="close-info" class="info-popover" popover="hint">
+  This is some information about <strong>closing the current</strong> thing.
+</div>
+```
+
+#### CSS
+
+```css hidden
+header {
+  display: flex;
+  justify-content: center;
+}
+header button {
+  margin: 0.4rem auto;
+}
+```
+
+We've used [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) to position the menu popover below the `<button>` and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to lay out the menu items and info buttons.
+
+```css
+#menu {
+  margin: 0;
+  margin-top: 0.4rem;
+  inset: auto;
+  position-area: bottom;
+}
+#menu ul {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem;
+  padding: 0.4rem;
+}
+#menu li {
+  grid-column: span 2;
+  display: grid;
+  grid: inherit;
+  grid-template-columns: subgrid;
+  gap: 1.4rem;
+}
+li [popovertarget] {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+li button {
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+```
+
+Here, we've used anchor positioning to make the info popovers appear to the right of their respective info buttons.
+
+```css
+div.info-popover {
+  margin: 2rem;
+  inset: auto;
+  max-width: 300px;
+  position-area: right;
+}
+```
+
+#### Result
+
+Click the _Open Menu_ button, then click the info icons (ⓘ) next to the menu options to open the info popovers.
+
+{{EmbedLiveSample('popover_hint', 600, 250)}}
 
 > [!NOTE]
 > 在我們的 [Popover API 範例集頁](https://mdn.github.io/dom-examples/popover-api/)中可以找到所有 MDN 的 popover 範例。
