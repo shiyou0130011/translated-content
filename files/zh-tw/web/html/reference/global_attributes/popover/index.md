@@ -99,7 +99,7 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 </div>
 ```
 
-In the final part of the HTML, we create the info popovers for each menu item. Each popover includes `popover="hint"`, which means it will not close the original menu popover but will close the other open info popovers.
+最後，在 HTML 給所有目錄項建立巢狀彈出視窗。每個彈出視窗都有 `popover="hint"` 的屬性，這是用來確保開啟時，不會關掉上一層彈出視窗（但依舊會關閉其他彈出視窗）。
 
 ```html
 <!-- info popovers -->
@@ -129,7 +129,7 @@ header button {
 }
 ```
 
-We've used [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) to position the menu popover below the `<button>` and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to lay out the menu items and info buttons.
+在這裡，我們使用 [anchor positioning](/zh-tw/docs/Web/CSS/Guides/Anchor_positioning) 讓彈出視窗的位置放在 `<button>` 下方；使用 [grid](/zh-tw/docs/Web/CSS/Guides/Grid_layout) 來排版目錄項目與按鈕。
 
 ```css
 #menu {
