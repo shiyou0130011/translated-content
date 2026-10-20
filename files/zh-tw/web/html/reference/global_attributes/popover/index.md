@@ -32,9 +32,9 @@ Popover 元素默認情況下會有條樣式 `display: none` 將其隱藏，除�
 
 [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) 狀態的彈出視窗，可由對應的控制元素（由 [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) 屬性決定）來顯示或隱藏。另外還能「輕觸關閉」，即點擊彈出視窗區域外、開啟另一個彈出視窗、或使用瀏覽器專屬的機制（例如 <kbd>Esc</kbd> 鍵）來關閉彈出視窗。
 
-Generally only one `auto` popover can be displayed on-screen at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/zh-tw/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
+ 一般來說，一次只會顯示一個 `auto` 的彈出視窗——當要開啟第二個彈出視窗時，原先開啟的就會自動關閉。少數的例外狀況是巢狀彈出視窗，詳細可參閱[巢狀彈出視窗](#巢狀彈出視窗)章節。
 
-They can also be controlled using JavaScript, for example the {{domxref("HTMLElement.togglePopover()")}} method can be used to toggle a popover between shown and hidden.
+彈出視窗可以使用 JavaScript 開控制，舉例來說， {{domxref("HTMLElement.togglePopover()")}} 能顯示、隱藏彈出視窗。
 
 By contrast, [`manual`](/zh-tw/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers must be manually shown and hidden — they don't automatically close other popovers when they are displayed and they can't be light dismissed. This allows for use cases where you want to show multiple popovers at the same time.
 
