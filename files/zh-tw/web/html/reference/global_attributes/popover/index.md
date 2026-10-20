@@ -30,7 +30,7 @@ Popover 元素默認情況下會有條樣式 `display: none` 將其隱藏，除�
 
 開啟的 popover 元素會顯示在{{glossary("top layer")}}其他元素之上，並且不會受到父元素的 {{cssxref('position')}} 或是 {{cssxref('overflow')}} 樣式影響。
 
-Popovers that have the [`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) state can be shown and hidden using associated controls (designated by the [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) and "light dismissed" by clicking outside the popover area, opening another popover, or pressing browser-specific mechanisms such as the <kbd>Esc</kbd> key.
+[`auto`](/zh-tw/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) 狀態的彈出視窗，可由對應的控制元素（由 [`popovertarget`](/zh-tw/docs/Web/HTML/Reference/Elements/button#popovertarget) 屬性決定）來顯示或隱藏。另外還能「輕觸關閉」，即點擊彈出視窗區域外、開啟另一個彈出視窗、或使用瀏覽器專屬的機制（例如 <kbd>Esc</kbd> 鍵）來關閉彈出視窗。
 
 Generally only one `auto` popover can be displayed on-screen at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/zh-tw/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
 
