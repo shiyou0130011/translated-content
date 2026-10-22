@@ -38,7 +38,7 @@ Popover 元素默認情況下會有條樣式 `display: none` 將其隱藏，除�
 
 相比之下，[`manual`](/zh-tw/docs/Web/API/Popover_API/Using#using_manual_popover_state) 的彈出視窗得自行處理顯示、隱藏——開啟其他彈出視窗時，原本開啟的不會自動關閉、且不能「輕觸關閉」。這適用於需要顯示多個彈出視窗的情境。
 
-[`hint`](/zh-tw/docs/Web/API/Popover_API/Using#using_hint_popover_state) 彈出視窗不會關閉其他顯示中的 `auto` 彈出視窗， but will close other hint popovers. They can be light dismissed and will respond to close requests.
+[`hint`](/zh-tw/docs/Web/API/Popover_API/Using#using_hint_popover_state) 彈出視窗不會關閉其他顯示中的 `auto` 彈出視窗，只會關閉其他 `hint` 的彈出視窗。`hint` 的彈出視窗一樣能「輕觸關閉」並提供回饋給關閉請求。
 
 Usually `hint` popovers are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/zh-tw/docs/Web/API/Element/mouseover_event)/[`mouseout`](/zh-tw/docs/Web/API/Element/mouseout_event) and [`focus`](/zh-tw/docs/Web/API/Element/focus_event)/[`blur`](/zh-tw/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 
